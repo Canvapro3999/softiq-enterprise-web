@@ -4,16 +4,16 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-6">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
-              About <span className="text-accent">SoftIQ Solutions</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground animate-fade-in">
+              About <span className="text-accent animate-glow">SoftIQ Solutions</span>
             </h2>
             
             <div className="space-y-6 text-lg lg:text-xl text-muted-foreground leading-relaxed">
-              <p>
+              <p className="animate-slide-in-left">
                 SoftIQ Solutions is a AI-based remote developer agency delivering production-ready software with Python, MERN, and AI. We assemble senior, dedicated teams tailored to your roadmap—covering backend, frontend, and cloud.
               </p>
               
-              <p>
+              <p className="animate-slide-in-right">
                 From greenfield builds to complex integrations, we deliver clean architectures, measurable results, and long-term support.
               </p>
             </div>
@@ -26,33 +26,33 @@ const About = () => {
             </h3>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="space-y-4 p-6 bg-secondary rounded-2xl hover:shadow-medium transition-all duration-300">
-                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto">
-                  <div className="w-6 h-6 bg-accent rounded"></div>
+              <div className="space-y-4 p-6 bg-secondary rounded-2xl hover:shadow-medium transition-all duration-300 hover:-translate-y-2 hover:scale-105 animate-stagger-1 group">
+                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto group-hover:bg-accent transition-all duration-300 animate-bounce-in">
+                  <div className="w-6 h-6 bg-accent rounded group-hover:bg-white transition-all duration-300"></div>
                 </div>
                 <h4 className="font-bold text-foreground text-lg">Speed with Quality</h4>
                 <p className="text-muted-foreground text-sm">CI/CD, testing, code reviews</p>
               </div>
               
-              <div className="space-y-4 p-6 bg-secondary rounded-2xl hover:shadow-medium transition-all duration-300">
-                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto">
-                  <div className="w-6 h-6 bg-accent rounded"></div>
+              <div className="space-y-4 p-6 bg-secondary rounded-2xl hover:shadow-medium transition-all duration-300 hover:-translate-y-2 hover:scale-105 animate-stagger-2 group">
+                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto group-hover:bg-accent transition-all duration-300 animate-bounce-in" style={{ animationDelay: '0.1s' }}>
+                  <div className="w-6 h-6 bg-accent rounded group-hover:bg-white transition-all duration-300"></div>
                 </div>
                 <h4 className="font-bold text-foreground text-lg">Scalable Architectures</h4>
                 <p className="text-muted-foreground text-sm">Microservices, event-driven patterns, cloud-native</p>
               </div>
               
-              <div className="space-y-4 p-6 bg-secondary rounded-2xl hover:shadow-medium transition-all duration-300">
-                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto">
-                  <div className="w-6 h-6 bg-accent rounded"></div>
+              <div className="space-y-4 p-6 bg-secondary rounded-2xl hover:shadow-medium transition-all duration-300 hover:-translate-y-2 hover:scale-105 animate-stagger-3 group">
+                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto group-hover:bg-accent transition-all duration-300 animate-bounce-in" style={{ animationDelay: '0.2s' }}>
+                  <div className="w-6 h-6 bg-accent rounded group-hover:bg-white transition-all duration-300"></div>
                 </div>
                 <h4 className="font-bold text-foreground text-lg">AI-Driven Value</h4>
                 <p className="text-muted-foreground text-sm">LLMs, chatbots, automation, analytics</p>
               </div>
               
-              <div className="space-y-4 p-6 bg-secondary rounded-2xl hover:shadow-medium transition-all duration-300">
-                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto">
-                  <div className="w-6 h-6 bg-accent rounded"></div>
+              <div className="space-y-4 p-6 bg-secondary rounded-2xl hover:shadow-medium transition-all duration-300 hover:-translate-y-2 hover:scale-105 animate-stagger-4 group">
+                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto group-hover:bg-accent transition-all duration-300 animate-bounce-in" style={{ animationDelay: '0.3s' }}>
+                  <div className="w-6 h-6 bg-accent rounded group-hover:bg-white transition-all duration-300"></div>
                 </div>
                 <h4 className="font-bold text-foreground text-lg">Clear Communication</h4>
                 <p className="text-muted-foreground text-sm">Transparent sprints, demos, documentation</p>
@@ -61,8 +61,8 @@ const About = () => {
           </div>
 
           {/* Mission Statement */}
-          <div className="pt-12 p-8 bg-gradient-subtle rounded-2xl">
-            <p className="text-lg text-muted-foreground italic">
+          <div className="pt-12 p-8 bg-gradient-subtle rounded-2xl hover:shadow-lg transition-all duration-500 animate-scale-up hover:scale-105">
+            <p className="text-lg text-muted-foreground italic animate-typewriter overflow-hidden whitespace-nowrap border-r-2 border-accent">
               "We build senior remote teams for you that deliver work fast, with excellent quality and measurable results."
             </p>
           </div>

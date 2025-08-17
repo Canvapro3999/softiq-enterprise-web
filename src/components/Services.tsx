@@ -26,10 +26,10 @@ const Services = () => {
     <section id="services" className="py-20 lg:py-28 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
-            Our <span className="text-accent">Services</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground animate-fade-in">
+            Our <span className="text-accent animate-glow">Services</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up">
             Comprehensive development solutions tailored to your business needs
           </p>
         </div>
@@ -38,12 +38,13 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-background p-8 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 hover:-translate-y-2 group"
+              className={`bg-background p-8 rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 hover:-translate-y-4 hover:scale-105 group cursor-pointer animate-stagger-${index + 1} hover:bg-gradient-subtle`}
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="space-y-6">
                 {/* Icon */}
-                <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-300">
-                  <service.icon className="w-8 h-8 text-accent group-hover:text-white" />
+                <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-500 group-hover:rotate-12 group-hover:scale-110 animate-bounce-in">
+                  <service.icon className="w-8 h-8 text-accent group-hover:text-white transition-all duration-300 group-hover:animate-wiggle" />
                 </div>
 
                 {/* Content */}

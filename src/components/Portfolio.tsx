@@ -75,10 +75,10 @@ const Portfolio = () => {
     <section id="portfolio" className="py-20 lg:py-28 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
-            Our <span className="text-accent">Portfolio</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground animate-fade-in">
+            Our <span className="text-accent animate-glow">Portfolio</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up">
             Showcase of our enterprise-grade solutions and innovative projects
           </p>
         </div>
@@ -87,7 +87,8 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-background p-6 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 hover:-translate-y-2 group cursor-pointer"
+              className="bg-background p-6 rounded-2xl shadow-medium hover:shadow-large transition-all duration-500 hover:-translate-y-4 hover:scale-105 group cursor-pointer animate-stagger-1 hover:bg-gradient-subtle"
+              style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openModal(project)}
             >
               <div className="space-y-4">
@@ -139,8 +140,8 @@ const Portfolio = () => {
 
         {/* Modal */}
         {selectedProject && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-            <div className="bg-background rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-large">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
+            <div className="bg-background rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-large animate-scale-up">
               <div className="p-6 border-b border-border flex items-center justify-between">
                 <h3 className="text-2xl font-bold text-foreground">{selectedProject.title}</h3>
                 <button onClick={closeModal} className="text-muted-foreground hover:text-foreground">
