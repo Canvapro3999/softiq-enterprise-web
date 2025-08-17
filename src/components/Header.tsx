@@ -19,7 +19,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/3ab91927-69da-4e18-8d92-a3dac98ae842.png" 
               alt="SoftIQ Solutions" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
 
