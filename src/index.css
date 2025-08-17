@@ -2,41 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* SoftIQ Solutions Design System - Premium Enterprise Theme
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
+    /* Base Colors - White Dominant Theme */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 222 84% 5%;
+    
+    /* Card Components */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 222 84% 5%;
+    
+    /* Popover Components */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 222 84% 5%;
+    
+    /* Primary - Deep Charcoal */
+    --primary: 222 84% 5%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - Light Gray */
+    --secondary: 210 11% 96%;
+    --secondary-foreground: 222 84% 5%;
+    
+    /* Muted Elements */
+    --muted: 210 11% 96%;
+    --muted-foreground: 220 9% 42%;
+    
+    /* Orange Accent - Strategic Usage Only */
+    --accent: 22 96% 53%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Neutral Grays */
+    --neutral-900: 222 84% 5%;
+    --neutral-600: 220 9% 42%;
+    --neutral-200: 210 16% 91%;
+    
+    /* Destructive States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders & Inputs */
+    --border: 210 16% 91%;
+    --input: 210 16% 91%;
+    --ring: 22 96% 53%;
+    
+    /* Border Radius */
+    --radius: 0.75rem;
+    
+    /* Premium Shadows */
+    --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-medium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-large: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
+    /* Gradients */
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 11% 98%) 100%);
+    --gradient-orange: linear-gradient(135deg, hsl(22 96% 53%) 0%, hsl(22 96% 60%) 100%);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --sidebar-background: 0 0% 98%;
 
