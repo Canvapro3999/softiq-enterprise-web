@@ -17,7 +17,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img 
-              src="/lovable-uploads/04a1feba-985d-4123-bd8f-91fbfd821452.png" 
+              src="/lovable-uploads/3ab91927-69da-4e18-8d92-a3dac98ae842.png" 
               alt="SoftIQ Solutions" 
               className="h-12 w-auto"
             />
@@ -63,9 +63,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button variant="chat" size="default">
-              CHAT US UP
-            </Button>
+            <a href="mailto:softiqsolutions.tech@gmail.com">
+              <Button variant="chat" size="default">
+                CONTACT US
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -104,9 +106,11 @@ const Header = () => {
                   AI Chatbots Development
                 </a>
               </div>
-              <Button variant="chat" size="default" className="mt-4">
-                CHAT US UP
-              </Button>
+              <a href="mailto:softiqsolutions.tech@gmail.com">
+                <Button variant="chat" size="default" className="mt-4">
+                  CONTACT US
+                </Button>
+              </a>
             </div>
           </div>
         )}

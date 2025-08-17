@@ -10,7 +10,7 @@ const About = () => {
             
             <div className="space-y-6 text-lg lg:text-xl text-muted-foreground leading-relaxed">
               <p>
-                SoftIQ Solutions is a Multan-based remote developer agency delivering production-ready software with Python, MERN, and AI. We assemble senior, dedicated teams tailored to your roadmap—covering backend, frontend, cloud, and MLOps.
+                SoftIQ Solutions is a AI-based remote developer agency delivering production-ready software with Python, MERN, and AI. We assemble senior, dedicated teams tailored to your roadmap—covering backend, frontend, and cloud.
               </p>
               
               <p>
@@ -60,10 +60,10 @@ const About = () => {
             </div>
           </div>
 
-          {/* Urdu Touch */}
+          {/* Mission Statement */}
           <div className="pt-12 p-8 bg-gradient-subtle rounded-2xl">
             <p className="text-lg text-muted-foreground italic">
-              "Hum aap ke liye senior remote teams build karte hain jo kaam ko tez, behtareen quality aur measurable results ke saath deliver karti hain."
+              "We build senior remote teams for you that deliver work fast, with excellent quality and measurable results."
             </p>
           </div>
         </div>

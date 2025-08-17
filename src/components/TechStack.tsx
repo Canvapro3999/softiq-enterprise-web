@@ -1,16 +1,30 @@
+import { 
+  Database, 
+  Zap, 
+  Brain, 
+  MessageSquare, 
+  Code, 
+  Paintbrush, 
+  Atom, 
+  ArrowRight, 
+  Globe, 
+  Smartphone, 
+  Cloud 
+} from "lucide-react";
+
 const TechStack = () => {
   const technologies = [
-    { name: "MERN STACK", color: "text-green-600" },
-    { name: "FASTAPI", color: "text-teal-600" },
-    { name: "LLM MODELS", color: "text-purple-600" },
-    { name: "CHATBOTS", color: "text-blue-600" },
-    { name: "PYTHON", color: "text-yellow-600" },
-    { name: "TAILWINDCSS", color: "text-cyan-600" },
-    { name: "REACT JS", color: "text-blue-500" },
-    { name: "NEXT.js", color: "text-gray-800" },
-    { name: "WEBSITE DEVELOPMENT", color: "text-indigo-600" },
-    { name: "APP DEVELOPMENT", color: "text-pink-600" },
-    { name: "AWS", color: "text-orange-600" }
+    { name: "MERN STACK", icon: Database, color: "text-green-600" },
+    { name: "FASTAPI", icon: Zap, color: "text-teal-600" },
+    { name: "LLM MODELS", icon: Brain, color: "text-purple-600" },
+    { name: "CHATBOTS", icon: MessageSquare, color: "text-blue-600" },
+    { name: "PYTHON", icon: Code, color: "text-yellow-600" },
+    { name: "TAILWINDCSS", icon: Paintbrush, color: "text-cyan-600" },
+    { name: "REACT JS", icon: Atom, color: "text-blue-500" },
+    { name: "NEXT.js", icon: ArrowRight, color: "text-gray-800" },
+    { name: "WEBSITE DEVELOPMENT", icon: Globe, color: "text-indigo-600" },
+    { name: "APP DEVELOPMENT", icon: Smartphone, color: "text-pink-600" },
+    { name: "AWS", icon: Cloud, color: "text-orange-600" }
   ];
 
   return (
@@ -26,24 +40,27 @@ const TechStack = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
-          {technologies.map((tech, index) => (
-            <div 
-              key={index}
-              className="group bg-secondary p-6 rounded-2xl text-center hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-medium"
-            >
-              <div className="space-y-3">
-                {/* Icon Placeholder */}
-                <div className="w-12 h-12 bg-accent/20 group-hover:bg-white/20 rounded-xl mx-auto flex items-center justify-center transition-all duration-300">
-                  <div className="w-6 h-6 bg-accent group-hover:bg-white rounded"></div>
+          {technologies.map((tech, index) => {
+            const IconComponent = tech.icon;
+            return (
+              <div 
+                key={index}
+                className="group bg-secondary p-6 rounded-2xl text-center hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-medium"
+              >
+                <div className="space-y-3">
+                  {/* Tech Icon */}
+                  <div className="w-12 h-12 bg-accent/20 group-hover:bg-white/20 rounded-xl mx-auto flex items-center justify-center transition-all duration-300">
+                    <IconComponent className={`w-6 h-6 ${tech.color} group-hover:text-white transition-colors duration-300`} />
+                  </div>
+                  
+                  {/* Tech Name */}
+                  <h3 className="font-bold text-sm text-foreground group-hover:text-white transition-colors duration-300">
+                    {tech.name}
+                  </h3>
                 </div>
-                
-                {/* Tech Name */}
-                <h3 className="font-bold text-sm text-foreground group-hover:text-white transition-colors duration-300">
-                  {tech.name}
-                </h3>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

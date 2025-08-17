@@ -14,9 +14,11 @@ const FooterCTA = () => {
           </p>
           
           <div className="pt-4">
-            <Button variant="hero" size="xl" className="bg-accent hover:bg-accent/90">
-              CONTACT US
-            </Button>
+            <a href="mailto:softiqsolutions.tech@gmail.com">
+              <Button variant="hero" size="xl" className="bg-accent hover:bg-accent/90">
+                CONTACT US
+              </Button>
+            </a>
           </div>
         </div>
       </div>
