@@ -47,13 +47,13 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className={`bg-background p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover-lift group animate-scale-in ${cardsVisible ? 'visible' : ''}`}
-              style={{ transitionDelay: `${index * 0.1}s` }}
+              className={`bg-background p-6 rounded-xl shadow-lg hover-glow group animate-scale-in ${cardsVisible ? 'visible' : ''}`}
+              style={{ transitionDelay: `${index * 0.2}s` }}
             >
               <div className="space-y-5">
                 {/* Icon */}
-                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-200">
-                  <service.icon className="w-6 h-6 text-accent group-hover:text-white" />
+                <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-400">
+                  <service.icon className="w-7 h-7 text-accent group-hover:text-white" />
                 </div>
 
                 {/* Content */}

@@ -31,12 +31,12 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div 
-              className={`flex flex-col sm:flex-row gap-3 animate-scale-in stagger-2 ${titleVisible ? 'visible' : ''}`}
+              className={`flex flex-col sm:flex-row gap-4 animate-scale-in stagger-2 ${titleVisible ? 'visible' : ''}`}
             >
-              <Button variant="hero" size="lg" className="flex-1 sm:flex-none hover-lift">
+              <Button variant="hero" size="lg" className="flex-1 sm:flex-none">
                 LET'S GET STARTED
               </Button>
-              <Button variant="heroOutline" size="lg" className="flex-1 sm:flex-none hover-lift">
+              <Button variant="heroOutline" size="lg" className="flex-1 sm:flex-none">
                 HIRE REMOTE TEAMS
               </Button>
             </div>

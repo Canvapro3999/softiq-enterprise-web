@@ -37,33 +37,33 @@ const About = () => {
               ref={cardsRef}
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
             >
-              <div className={`space-y-3 p-5 bg-secondary rounded-xl hover:shadow-lg transition-all duration-200 hover-lift animate-scale-in stagger-1 ${cardsVisible ? 'visible' : ''}`}>
-                <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                  <div className="w-5 h-5 bg-accent rounded"></div>
+              <div className={`space-y-3 p-5 bg-secondary rounded-xl hover-glow animate-scale-in stagger-1 ${cardsVisible ? 'visible' : ''}`}>
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                  <div className="w-6 h-6 bg-accent rounded"></div>
                 </div>
                 <h4 className="font-medium text-foreground text-base">Speed with Quality</h4>
                 <p className="text-muted-foreground text-sm">CI/CD, testing, code reviews</p>
               </div>
               
-              <div className={`space-y-3 p-5 bg-secondary rounded-xl hover:shadow-lg transition-all duration-200 hover-lift animate-scale-in stagger-2 ${cardsVisible ? 'visible' : ''}`}>
-                <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                  <div className="w-5 h-5 bg-accent rounded"></div>
+              <div className={`space-y-3 p-5 bg-secondary rounded-xl hover-glow animate-scale-in stagger-2 ${cardsVisible ? 'visible' : ''}`}>
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                  <div className="w-6 h-6 bg-accent rounded"></div>
                 </div>
                 <h4 className="font-medium text-foreground text-base">Scalable Architectures</h4>
                 <p className="text-muted-foreground text-sm">Microservices, event-driven patterns, cloud-native</p>
               </div>
               
-              <div className={`space-y-3 p-5 bg-secondary rounded-xl hover:shadow-lg transition-all duration-200 hover-lift animate-scale-in stagger-3 ${cardsVisible ? 'visible' : ''}`}>
-                <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                  <div className="w-5 h-5 bg-accent rounded"></div>
+              <div className={`space-y-3 p-5 bg-secondary rounded-xl hover-glow animate-scale-in stagger-3 ${cardsVisible ? 'visible' : ''}`}>
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                  <div className="w-6 h-6 bg-accent rounded"></div>
                 </div>
                 <h4 className="font-medium text-foreground text-base">AI-Driven Value</h4>
                 <p className="text-muted-foreground text-sm">LLMs, chatbots, automation, analytics</p>
               </div>
               
-              <div className={`space-y-3 p-5 bg-secondary rounded-xl hover:shadow-lg transition-all duration-200 hover-lift animate-scale-in stagger-4 ${cardsVisible ? 'visible' : ''}`}>
-                <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                  <div className="w-5 h-5 bg-accent rounded"></div>
+              <div className={`space-y-3 p-5 bg-secondary rounded-xl hover-glow animate-scale-in stagger-4 ${cardsVisible ? 'visible' : ''}`}>
+                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                  <div className="w-6 h-6 bg-accent rounded"></div>
                 </div>
                 <h4 className="font-medium text-foreground text-base">Clear Communication</h4>
                 <p className="text-muted-foreground text-sm">Transparent sprints, demos, documentation</p>
