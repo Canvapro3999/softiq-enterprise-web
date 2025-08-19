@@ -31,10 +31,10 @@ const TechStack = () => {
     <section className="py-20 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground animate-fade-in">
-            Our <span className="text-accent animate-glow">Tech Stack</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+            Our <span className="text-accent">Tech Stack</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Cutting-edge technologies for modern solutions
           </p>
         </div>
@@ -45,13 +45,12 @@ const TechStack = () => {
             return (
               <div 
                 key={index}
-                className="group bg-secondary p-6 rounded-2xl text-center hover:bg-accent hover:text-white transition-all duration-500 hover:scale-110 hover:shadow-medium hover:-translate-y-2 cursor-pointer animate-bounce-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group bg-secondary p-6 rounded-2xl text-center hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-medium"
               >
                 <div className="space-y-3">
                   {/* Tech Icon */}
-                  <div className="w-12 h-12 bg-accent/20 group-hover:bg-white/20 rounded-xl mx-auto flex items-center justify-center transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
-                    <IconComponent className={`w-6 h-6 ${tech.color} group-hover:text-white transition-colors duration-300 group-hover:animate-wiggle`} />
+                  <div className="w-12 h-12 bg-accent/20 group-hover:bg-white/20 rounded-xl mx-auto flex items-center justify-center transition-all duration-300">
+                    <IconComponent className={`w-6 h-6 ${tech.color} group-hover:text-white transition-colors duration-300`} />
                   </div>
                   
                   {/* Tech Name */}
