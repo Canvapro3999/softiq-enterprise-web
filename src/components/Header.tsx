@@ -64,7 +64,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex">
             <a href="mailto:softiqsolutions.tech@gmail.com">
-              <Button variant="chat" size="default">
+              <Button variant="chat" size="sm" className="hover-lift">
                 CONTACT US
               </Button>
             </a>
@@ -107,7 +107,7 @@ const Header = () => {
                 </a>
               </div>
               <a href="mailto:softiqsolutions.tech@gmail.com">
-                <Button variant="chat" size="default" className="mt-4">
+                <Button variant="chat" size="sm" className="mt-4 hover-lift">
                   CONTACT US
                 </Button>
               </a>

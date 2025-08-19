@@ -1,6 +1,9 @@
 import { Globe, Smartphone, Bot } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Services = () => {
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation();
   const services = [
     {
       icon: Globe,
@@ -23,45 +26,52 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 lg:py-28 bg-secondary/30">
+    <section id="services" className="py-16 lg:py-20 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+        <div 
+          ref={titleRef}
+          className={`text-center space-y-4 mb-12 animate-slide-up ${titleVisible ? 'visible' : ''}`}
+        >
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
             Our <span className="text-accent">Services</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Comprehensive development solutions tailored to your business needs
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div 
+          ref={cardsRef}
+          className="grid lg:grid-cols-3 gap-6"
+        >
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-background p-8 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 hover:-translate-y-2 group"
+              className={`bg-background p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover-lift group animate-scale-in ${cardsVisible ? 'visible' : ''}`}
+              style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {/* Icon */}
-                <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-300">
-                  <service.icon className="w-8 h-8 text-accent group-hover:text-white" />
+                <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-200">
+                  <service.icon className="w-6 h-6 text-accent group-hover:text-white" />
                 </div>
 
                 {/* Content */}
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-foreground">
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold text-foreground">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm">
                     {service.description}
                   </p>
                 </div>
 
                 {/* Features */}
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="text-sm text-foreground font-medium">{feature}</span>
+                    <div key={featureIndex} className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
+                      <span className="text-xs text-foreground font-medium">{feature}</span>
                     </div>
                   ))}
                 </div>
