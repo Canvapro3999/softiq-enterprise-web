@@ -39,7 +39,7 @@ const TechStack = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {technologies.map((tech, index) => {
             const IconComponent = tech.icon;
             return (

@@ -17,9 +17,9 @@ const Hero = () => {
               ref={titleRef}
               className={`space-y-4 animate-slide-up ${titleVisible ? 'visible' : ''}`}
             >
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground leading-tight tracking-tight">
                 Hire Expert Remote Teams in{" "}
-                <span className="text-accent">Python, MERN STACK, AI</span>
+                <span className="text-accent font-black bg-gradient-primary bg-clip-text text-transparent">Python, MERN STACK, AI</span>
               </h1>
               
               <p 
