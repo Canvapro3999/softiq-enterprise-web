@@ -11,8 +11,12 @@ import {
   Smartphone, 
   Cloud 
 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const TechStack = () => {
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation();
+  
   const technologies = [
     { name: "MERN STACK", icon: Database, color: "text-green-600" },
     { name: "FASTAPI", icon: Zap, color: "text-teal-600" },
@@ -30,7 +34,10 @@ const TechStack = () => {
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-6 mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center space-y-6 mb-16 animate-fade-in ${titleVisible ? 'visible' : ''}`}
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
             Our <span className="text-accent">Tech Stack</span>
           </h2>
@@ -39,13 +46,16 @@ const TechStack = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div 
+          ref={cardsRef}
+          className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 animate-slide-up ${cardsVisible ? 'visible' : ''}`}
+        >
           {technologies.map((tech, index) => {
             const IconComponent = tech.icon;
             return (
               <div 
                 key={index}
-                className="group bg-secondary p-6 rounded-2xl text-center hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-medium"
+                className={`group bg-secondary p-6 rounded-2xl text-center hover:bg-accent hover:text-white transition-all duration-300 hover-lift hover-glow animate-scale-in stagger-${Math.min(index % 6 + 1, 6)} ${cardsVisible ? 'visible' : ''}`}
               >
                 <div className="space-y-3">
                   {/* Tech Icon */}

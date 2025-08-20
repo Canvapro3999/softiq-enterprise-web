@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, X } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
+  const { ref: projectsRef, isVisible: projectsVisible } = useScrollAnimation();
 
   const projects = [
     {
@@ -74,7 +77,10 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 lg:py-28 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-6 mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center space-y-6 mb-16 animate-fade-in ${titleVisible ? 'visible' : ''}`}
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
             Our <span className="text-accent">Portfolio</span>
           </h2>
@@ -83,11 +89,14 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+          ref={projectsRef}
+          className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-up ${projectsVisible ? 'visible' : ''}`}
+        >
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-background p-6 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 hover:-translate-y-2 group cursor-pointer"
+              className={`bg-background p-6 rounded-2xl shadow-medium hover:shadow-large transition-all duration-300 hover-lift hover-glow group cursor-pointer animate-scale-in stagger-${Math.min(index % 6 + 1, 6)} ${projectsVisible ? 'visible' : ''}`}
               onClick={() => openModal(project)}
             >
               <div className="space-y-4">

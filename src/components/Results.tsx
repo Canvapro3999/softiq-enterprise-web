@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Results = () => {
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
+  const { ref: mainResultsRef, isVisible: mainResultsVisible } = useScrollAnimation();
+  const { ref: additionalResultsRef, isVisible: additionalResultsVisible } = useScrollAnimation();
+  
   const mainResults = [
     {
       title: "AI-Powered Marketplace Revolution",
@@ -46,7 +51,10 @@ const Results = () => {
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-6 mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center space-y-6 mb-16 animate-fade-in ${titleVisible ? 'visible' : ''}`}
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
             Proven <span className="text-accent">Results That Matter</span>
           </h2>
@@ -56,11 +64,14 @@ const Results = () => {
         </div>
 
         {/* Main Results */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+        <div 
+          ref={mainResultsRef}
+          className={`grid lg:grid-cols-2 gap-8 mb-12 animate-slide-up ${mainResultsVisible ? 'visible' : ''}`}
+        >
           {mainResults.map((result, index) => (
             <div 
               key={index}
-              className="bg-gradient-subtle p-8 rounded-2xl shadow-large hover:shadow-xl transition-all duration-300 border border-border"
+              className={`bg-gradient-subtle p-8 rounded-2xl shadow-large hover:shadow-xl transition-all duration-300 border border-border hover-lift hover-glow animate-scale-in stagger-${index + 1} ${mainResultsVisible ? 'visible' : ''}`}
             >
               <div className="space-y-6">
                 <div className="space-y-4">
@@ -101,11 +112,14 @@ const Results = () => {
         </div>
 
         {/* Additional Results */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div 
+          ref={additionalResultsRef}
+          className={`grid lg:grid-cols-2 gap-8 animate-slide-up ${additionalResultsVisible ? 'visible' : ''}`}
+        >
           {additionalResults.map((result, index) => (
             <div 
               key={index}
-              className="bg-secondary p-6 rounded-2xl hover:shadow-medium transition-all duration-300"
+              className={`bg-secondary p-6 rounded-2xl hover:shadow-medium transition-all duration-300 hover-lift animate-scale-in stagger-${index + 3} ${additionalResultsVisible ? 'visible' : ''}`}
             >
               <div className="space-y-4">
                 <div className="space-y-3">

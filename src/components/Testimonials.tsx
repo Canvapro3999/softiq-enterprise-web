@@ -1,10 +1,18 @@
 import { Star } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Testimonials = () => {
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
+  const { ref: testimonialRef, isVisible: testimonialVisible } = useScrollAnimation();
+  const { ref: indicatorsRef, isVisible: indicatorsVisible } = useScrollAnimation();
+  
   return (
     <section className="py-20 lg:py-28 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-6 mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center space-y-6 mb-16 animate-fade-in ${titleVisible ? 'visible' : ''}`}
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
             What Our <span className="text-accent">Clients Say About Us</span>
           </h2>
@@ -14,7 +22,10 @@ const Testimonials = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-background p-8 lg:p-12 rounded-2xl shadow-large">
+          <div 
+            ref={testimonialRef}
+            className={`bg-background p-8 lg:p-12 rounded-2xl shadow-large hover-glow animate-scale-in ${testimonialVisible ? 'visible' : ''}`}
+          >
             <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8">
               {/* Client Photo */}
               <div className="flex-shrink-0">
@@ -64,18 +75,21 @@ const Testimonials = () => {
           </div>
 
           {/* Additional Trust Indicators */}
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="text-center space-y-2">
+          <div 
+            ref={indicatorsRef}
+            className={`grid md:grid-cols-3 gap-6 mt-12 animate-slide-up ${indicatorsVisible ? 'visible' : ''}`}
+          >
+            <div className={`text-center space-y-2 animate-scale-in stagger-1 ${indicatorsVisible ? 'visible' : ''}`}>
               <div className="text-3xl font-bold text-accent">4.9/5</div>
               <p className="text-sm text-muted-foreground">Average Client Rating</p>
             </div>
             
-            <div className="text-center space-y-2">
+            <div className={`text-center space-y-2 animate-scale-in stagger-2 ${indicatorsVisible ? 'visible' : ''}`}>
               <div className="text-3xl font-bold text-accent">98%</div>
               <p className="text-sm text-muted-foreground">Project Success Rate</p>
             </div>
             
-            <div className="text-center space-y-2">
+            <div className={`text-center space-y-2 animate-scale-in stagger-3 ${indicatorsVisible ? 'visible' : ''}`}>
               <div className="text-3xl font-bold text-accent">24h</div>
               <p className="text-sm text-muted-foreground">Average Response Time</p>
             </div>

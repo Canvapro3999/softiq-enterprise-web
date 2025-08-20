@@ -4,8 +4,8 @@ import heroIllustration from "@/assets/hero-illustration.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Hero = () => {
-  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
-  const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation();
+  const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation(0.1, '0px 0px 0px 0px');
+  const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation(0.1, '0px 0px -100px 0px');
 
   return (
     <section className="py-16 lg:py-20 bg-gradient-subtle overflow-hidden">
