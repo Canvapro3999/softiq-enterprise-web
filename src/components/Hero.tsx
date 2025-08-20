@@ -19,7 +19,9 @@ const Hero = () => {
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground leading-tight tracking-tight">
                 Hire Expert Remote Teams in{" "}
-                <span className="text-accent font-black bg-gradient-primary bg-clip-text text-transparent">Python, MERN STACK, AI</span>
+                <span className="font-black text-[hsl(22_96%_53%)]">Python</span>,{" "}
+                <span className="font-black text-[hsl(22_96%_53%)]">MERN STACK</span>,{" "}
+                <span className="font-black text-[hsl(22_96%_53%)]">AI</span>
               </h1>
               
               <p 
